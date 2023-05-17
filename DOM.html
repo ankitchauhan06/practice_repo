@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>  
+
+<body>
+    <!-- <button onclick="goBack()">Go Back</button>
+    <p>Click the button to display a date after changing the hours</p> -->
+
+    <p class="para">Plzz Like The video</p>
+    <p class="para">Plzz Share A Video</p>
+    <h1 id ="heading">Change The heading</h1>
+
+    <button onclick="changeInfo()">Click it</button>
+
+
+    <!-- <button onclick=myFunction()>Try it</button> -->
+
+    <!-- <p id="demo"></p>
+    <p id="time"></p> -->
+    <style>
+        body{
+            background-color: gray;
+            place-items: center;
+            display: grid;
+        }
+        p{
+            color: antiquewhite;
+            
+        }
+        h1{
+            text-align: center;
+            color:aquamarine
+        }
+        button{
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            padding: 12px 22px;
+            /* margin-left: 40rem; */
+
+        }
+    </style>
+    
+    <script>
+        
+        // function myFunction(){
+        //     var t = new Date();
+        //     t.setHours(6);
+        //     document.getElementById("time").innerHTML = t; 
+        // }
+
+        // var t = new Date().toLocaleTimeString();
+        // document.getElementById("time").innerHTML = t;
+
+        //  var d = new Date().toLocaleDateString();
+        // document.getElementById("demo").innerHTML = d;
+
+
+        // (function(){
+        //     setInterval(()=>{
+        //         var t = new Date().toLocaleTimeString();
+        //         document.getElementById("time").innerHTML = t;
+        //     }, 1000)
+        // })();
+
+        // function goBack() {
+        //     window.history.back();
+        // }
+       
+        const changeInfo = ()=>{
+              document.getElementById('heading').innerHTML = 'Welcome to Me';    
+        }
+        
+
+
+
+    </script>
+    
+</body>
+
+</html>

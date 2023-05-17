@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+            display: grid;
+            place-items: center;
+            margin-top: 16rem;
+        }
+     .parent Div{
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        background-color:aquamarine
+       
+    
+     }
+     .child Div{
+        height: 200px;
+        width: 100px;
+        border: 2px solid black;
+        background-color: rgb(134, 26, 177);
+        box-shadow: 0px 10px 13px -10px black;
+        border: 10px solid rgb(55, 73, 73);
+        cursor: pointer;
+     }
+    </style>
+</head>
+<body>
+    <div class="parent Div" id="parent Id">
+        <div class="child Div" id="child Id"></div>
+    </div>
+
+    <script>
+     const parentId = document.getElementById('parent Id');
+     const childId = document.getElementById('child Id');
+
+     const parentCall = () => {
+        alert('I am a parent')
+     }
+
+     const childCall = () => {
+        alert('I am a child')
+        // event.stopPropagation
+     }
+     
+     parentId.addEventListener('click', parentCall, true);   // ture is nothing but bubble phase or capture phase
+     childId.addEventListener('click', childCall, true);
+
+    </script>
+</body>
+</html>

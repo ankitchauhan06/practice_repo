@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+                 margin: 0px;
+                 padding: 0px;
+             }
+          body{
+             background-color: purple;
+             display: grid;
+             place-items: center;
+          }
+          .button_container{
+             padding-top: 30px;
+          }  
+          h1{
+             margin-top: 20px;
+          }
+          .button_su{
+             overflow: hidden;
+             position: relative;
+             border-radius: 3px;
+             margin: 51px;
+             padding: 23px;
+             background: yellow;
+          }
+          a{
+             text-decoration: none;
+         }
+     
+          .button_text_container{
+             color: black;
+             text-align: center;
+             padding-left: 71px;
+     
+          } 
+     </style>
+</head>
+
+<body>
+<div class="content">
+    <h1>let's See what is Event Object </h1> 
+        <div class="button_container">
+             <div class="button_su">
+                <!-- <span class="su_button_circle">
+                </span> -->
+                <a href="#" class="button_su_inner" id="fourthWay">
+                    <span class="button_text_container">
+                       Event Listeners
+                    </span>
+                </a>
+            </div>
+      </div>
+    </div>
+    <script>
+        const fourthWay = document.getElementById('fourthWay');
+
+        const checkEvent = () =>{
+            alert('We are looking check Event');
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+        }
+          fourthWay.addEventListener('click', checkEvent);
+
+    </script>
+</body>
+</html> b

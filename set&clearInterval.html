@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <p id="para">can you stop me when i reach at 5 ?</p>
+            <br>
+            <button id="btn">Start</button>
+            <button id="btn1">Stop</button>
+        </div>
+    </div>
+    <script>
+    
+      const para = document.querySelector('#para');
+      const btn = document.querySelector('#btn');
+      const btn1 = document.querySelector('#btn1');
+      let timeRef;
+      let num = 0;
+        const newPara = () => {
+            para.innerHTML = '...loading'
+          timeRef = setInterval(() => {
+                para.innerHTML = `${num}`;
+                num++;
+            }, 1000);
+        }
+      btn.addEventListener('click', newPara);
+
+      btn1.addEventListener('click', () => {
+        clearInterval(timeRef);
+      });
+
+    </script>
+</body>
+</html>
